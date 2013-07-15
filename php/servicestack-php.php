@@ -43,7 +43,9 @@ function get_data_curl($base_url, $service_name, $post_data, $credentials)
 	
 	// Override the default headers
 	curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json', 'Accept: application/json', "Expect: 100-continue"));
-	curl_setopt($process, CURLOPT_HEADER, 1);   
+	
+	// 0 do not include header in output, 1 include header in output
+	curl_setopt($process, CURLOPT_HEADER, 0);   
 	
 	// Set username and password
 	if ($credentials != "")
