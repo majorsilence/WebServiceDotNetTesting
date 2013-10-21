@@ -1,0 +1,15 @@
+/ServiceTest/bin/Debug
+
+/ServiceTest.v11.suo
+
+/ServiceTest/obj/x86/Debug
+
+/packages/ServiceStack.3.9.67
+
+/packages/ServiceStack.Common.3.9.67
+
+/packages/ServiceStack.OrmLite.SqlServer.3.9.67
+
+/packages/ServiceStack.Redis.3.9.67
+
+/packages/ServiceStack.Text.3.9.67

@@ -11,10 +11,10 @@ using ServiceStack.ServiceInterface.Auth;
 namespace ServiceTest
 {
 
-public class HelloService : ServiceBase<Hello>
+public class HelloService : Service
 {
 
-	protected override object Run(Hello request)
+	public object Any(Hello request)
 	{
 
 		HelloResponse a = new HelloResponse();
