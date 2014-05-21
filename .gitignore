@@ -13,3 +13,16 @@
 /packages/ServiceStack.Redis.3.9.67
 
 /packages/ServiceStack.Text.3.9.67
+
+/packages/ServiceStack.3.9.71
+
+/packages/ServiceStack.Common.3.9.71
+
+/packages/ServiceStack.OrmLite.SqlServer.3.9.71
+
+/packages/ServiceStack.Redis.3.9.71
+
+/packages/ServiceStack.Text.3.9.71
+
+/.gitignore~
+/ServiceTest/packages.config~
