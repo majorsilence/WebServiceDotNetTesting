@@ -6,10 +6,11 @@ using System.Text;
 
 namespace ServiceTest
 {
-    class HiService : BaseService<HiResponse, Hi>
+    // The route must be register in Main.AppHost for this to work
+    public class HiService : BaseService<HiResponse, Hi>
     {
 
-         public override HiResponse MyExecute (Hi request)
+        public override HiResponse MyExecute (Hi request)
 	    {
 
             var res = new HiResponse();

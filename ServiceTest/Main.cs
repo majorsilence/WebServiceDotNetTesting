@@ -50,7 +50,8 @@ namespace ServiceTest
               .Add<Hello>("/hello")
               .Add<Hello>("/hello/{Name}")
               .Add<Hi>("/hi")
-              .Add<Hi>("/hi/{Name}");
+              .Add<Hi>("/hi/{Name}")
+              .Add<Bye>("/bye/{Name*}");
          
 
 
