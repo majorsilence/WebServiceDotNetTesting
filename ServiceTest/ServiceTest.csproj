@@ -51,6 +51,8 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaseService.cs" />
+    <Compile Include="HiService.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AssemblyInfo.cs" />
     <Compile Include="HelloService.cs" />

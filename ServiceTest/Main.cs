@@ -48,9 +48,17 @@ namespace ServiceTest
 			//register user-defined REST-ful urls
             Routes
               .Add<Hello>("/hello")
-              .Add<Hello>("/hello/{Name}");
+              .Add<Hello>("/hello/{Name}")
+              .Add<Hi>("/hi")
+              .Add<Hi>("/hi/{Name}");
+         
+
+
+
 			
 		}
+
+   
 	}
 
 }
