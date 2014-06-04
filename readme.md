@@ -1,4 +1,5 @@
-Example of connecting to a servicestack service using php and python.
+1. Example of connecting to a servicestack service using php and python.
+2. Example of abstract base class around servicestack service class
 
 To run the service 
 * open ServiceTest.sln in visual studio
