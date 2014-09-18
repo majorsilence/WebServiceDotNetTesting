@@ -52,13 +52,9 @@
     <Reference Include="System.Runtime.Serialization" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaseService.cs" />
-    <Compile Include="Bye.cs" />
-    <Compile Include="HiService.cs" />
-    <Compile Include="LayerListService.cs" />
+    <Compile Include="..\..\ServiceTest\LayerListService.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AssemblyInfo.cs" />
-    <Compile Include="HelloService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

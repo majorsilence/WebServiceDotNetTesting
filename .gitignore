@@ -26,3 +26,11 @@
 
 /.gitignore~
 /ServiceTest/packages.config~
+/csharpclient/ClientTest/bin
+/csharpclient/ClientTest/obj
+/csharpclient/packages/ServiceStack.3.9.71
+/csharpclient/packages/ServiceStack.Common.3.9.71
+/csharpclient/packages/ServiceStack.OrmLite.SqlServer.3.9.71
+/csharpclient/packages/ServiceStack.Redis.3.9.71
+/csharpclient/packages/ServiceStack.Text.3.9.71
+/csharpclient/ClientTest.v11.suo
