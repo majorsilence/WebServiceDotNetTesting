@@ -16,7 +16,7 @@ public class HelloService : Service
 
 	public object Any(Hello request)
 	{
-
+        // this method is never called as it it is overridden with the Get, Post, Put methods
 		HelloResponse a = new HelloResponse();
 		a.Result = "Hello, " + Convert.ToString(request.Name);
 		
@@ -28,6 +28,31 @@ public class HelloService : Service
 			
 		return a;
 	}
+
+
+    public HelloResponse Get(Hello request)
+    {
+        var response = new HelloResponse();
+        response.Result = "Get Response: " + request.Name;
+        return response;
+
+    }
+
+
+    public HelloResponse Post(Hello request)
+    {
+        var response = new HelloResponse();
+        response.Result = "Post Response " + request.Name;
+        return response;
+    }
+
+    public HelloResponse Put(Hello request)
+    {
+        var response = new HelloResponse();
+        response.Result = "Put Response" + request.Name;
+        return response;
+    }
+
 }
 
 	

@@ -1,8 +1,26 @@
 <?php
 
 get_hello_info();
+post_hello_info();
+put_hello_info();
 
 function get_hello_info()
+{
+	/*
+	$username = "user";
+	$password = "password";
+	$cred = "{$username}:{$password}";
+	*/
+	// If you are connecting to a service that uses basic authentication 
+	// you can use the code above to set the credentials.
+	$cred = "";
+
+	$json = get_data_curl("http://localhost:9200", "Hello", "Testthisservice", $cred);
+	echo 'Get Result: ' . $json->{'Result'} . "<br />";
+}
+
+
+function post_hello_info()
 {
 	$json_str = json_encode(array('Name' =>  'Test this service'));
 	
@@ -17,8 +35,28 @@ function get_hello_info()
 	$cred = "";
 
 	$json = post_data_curl("http://localhost:9200", "Hello", $json_str, $cred);
-	echo 'Result: ' . $json->{'Result'} . "<br />";
+	echo 'Post Result: ' . $json->{'Result'} . "<br />";
 }
+
+
+function put_hello_info()
+{
+	$json_str = json_encode(array('Name' =>  'Test this service'));
+	
+	
+	/*
+	$username = "user";
+	$password = "password";
+	$cred = "{$username}:{$password}";
+	*/
+	// If you are connecting to a service that uses basic authentication 
+	// you can use the code above to set the credentials.
+	$cred = "";
+
+	$json = put_data_curl("http://localhost:9200", "Hello", $json_str, $cred);
+	echo 'Put Result: ' . $json->{'Result'} . "<br />";
+}
+
 
 /**
 * Generic curl function to POST to a servicestack.net service.  This function
@@ -87,7 +125,7 @@ function get_data_curl($base_url, $service_name, $query_string, $credentials)
 
 	
 	// Will create a string like "http://localhost:9200/servicestack/json/syncreply/Hello";
-	$url = $base_url . '/json/syncreply/' . $query_string;
+	$url = $base_url . '/' . $service_name . '/' . $query_string;
 	
 	$ch = curl_init();
 	curl_setopt($ch, CURLOPT_URL, $url);
