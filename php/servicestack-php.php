@@ -83,7 +83,7 @@ function post_data_curl($base_url, $service_name, $post_data, $credentials)
 	curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json', 'Accept: application/json', "Expect: 100-continue"));
 	
 	// 0 do not include header in output, 1 include header in output
-	curl_setopt($process, CURLOPT_HEADER, 0);   
+	curl_setopt($ch, CURLOPT_HEADER, 0);   
 	
 	// Set username and password
 	if ($credentials != "")
@@ -91,7 +91,7 @@ function post_data_curl($base_url, $service_name, $post_data, $credentials)
 		curl_setopt($ch,CURLOPT_USERPWD, $credentials); 
 	}
 	
-	curl_setopt($process, CURLOPT_TIMEOUT, 30); 
+	curl_setopt($ch, CURLOPT_TIMEOUT, 30); 
 	
 	// if you are not running with SSL or if you don't have valid SSL
 	$verify_peer = false;
@@ -134,7 +134,7 @@ function get_data_curl($base_url, $service_name, $query_string, $credentials)
 	curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json', 'Accept: application/json', "Expect: 100-continue"));
 	
 	// 0 do not include header in output, 1 include header in output
-	curl_setopt($process, CURLOPT_HEADER, 0);   
+	curl_setopt($ch, CURLOPT_HEADER, 0);   
 	
 	// Set username and password
 	if ($credentials != "")
@@ -142,7 +142,7 @@ function get_data_curl($base_url, $service_name, $query_string, $credentials)
 		curl_setopt($ch,CURLOPT_USERPWD, $credentials); 
 	}
 	
-	curl_setopt($process, CURLOPT_TIMEOUT, 30); 
+	curl_setopt($ch, CURLOPT_TIMEOUT, 30); 
 	
 	// if you are not running with SSL or if you don't have valid SSL
 	$verify_peer = false;
@@ -182,7 +182,7 @@ function put_data_curl($base_url, $service_name, $post_data, $credentials)
 	curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json', 'Accept: application/json', "Expect: 100-continue"));
 	
 	// 0 do not include header in output, 1 include header in output
-	curl_setopt($process, CURLOPT_HEADER, 0);   
+	curl_setopt($ch, CURLOPT_HEADER, 0);   
 	
 	// Set username and password
 	if ($credentials != "")
@@ -190,7 +190,7 @@ function put_data_curl($base_url, $service_name, $post_data, $credentials)
 		curl_setopt($ch,CURLOPT_USERPWD, $credentials); 
 	}
 	
-	curl_setopt($process, CURLOPT_TIMEOUT, 30); 
+	curl_setopt($ch, CURLOPT_TIMEOUT, 30); 
 	
 	// if you are not running with SSL or if you don't have valid SSL
 	$verify_peer = false;
